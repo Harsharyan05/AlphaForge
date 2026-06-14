@@ -1,0 +1,29 @@
+.button-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.predict-btn {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.prediction-up {
+  background: #14532d;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.prediction-down {
+  background: #7f1d1d;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 25px;
+}
