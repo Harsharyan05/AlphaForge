@@ -1,384 +1,479 @@
 # 🚀 AlphaForge
 
-### AI-Powered Crypto Intelligence & Market Prediction Platform
+> AI-Powered Cryptocurrency Intelligence & Prediction Platform
 
-> Transforming raw cryptocurrency market data into actionable intelligence through Machine Learning, Data Engineering, and Real-Time Analytics.
-
-![Python](https://img.shields.io/badge/Python-3.11+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
-![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED)
-![ML](https://img.shields.io/badge/Machine-Learning-orange)
+AlphaForge is an end-to-end Machine Learning, Data Engineering, and Cloud-based cryptocurrency analytics platform that collects real-time market data, performs advanced feature engineering, trains predictive models, and serves intelligent market predictions through a scalable FastAPI backend.
 
 ---
 
-# 📖 Overview
+# 🌟 Highlights
 
-AlphaForge is an end-to-end cryptocurrency intelligence platform designed to collect, process, analyze, and predict cryptocurrency market movements using Machine Learning.
-
-The platform continuously ingests historical market data, stores it in a PostgreSQL database, performs feature engineering, trains predictive models, evaluates performance, and generates explainable trading signals.
-
-Unlike traditional crypto dashboards, AlphaForge focuses on building a complete AI-driven intelligence pipeline rather than simply visualizing prices.
-
----
-
-# 🎯 Problem Statement
-
-Cryptocurrency markets are:
-
-* Highly volatile
-* Data-intensive
-* Influenced by multiple external factors
-* Difficult to analyze manually
-
-Retail traders and analysts often struggle to:
-
-* Process large volumes of market data
-* Detect meaningful trends
-* Evaluate prediction quality
-* Build systematic trading intelligence
-
----
-
-# 💡 Solution
-
-AlphaForge automates the complete market intelligence workflow:
-
-✅ Data Collection
-
-✅ Data Storage
-
-✅ Feature Engineering
-
-✅ Machine Learning Prediction
-
-✅ Signal Generation
-
-✅ Model Evaluation
-
-✅ Performance Tracking
-
-The platform converts raw market data into structured intelligence that can support data-driven decision-making.
+- 📈 Multi-Coin Cryptocurrency Tracking
+- 🤖 Machine Learning Prediction Engine
+- ⚡ FastAPI REST Backend
+- 🗄️ PostgreSQL Cloud Database (Neon)
+- 📊 Technical Indicator Pipeline
+- 🐳 Docker Ready
+- ☁️ Cloud Deployment Ready
+- 🔄 Automated Data Ingestion
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-                     ┌─────────────────────┐
-                     │  Crypto Exchanges   │
-                     └──────────┬──────────┘
-                                │
-                                ▼
-                    ┌────────────────────────┐
-                    │ Data Ingestion Layer   │
-                    └──────────┬─────────────┘
-                               │
-                               ▼
-                    ┌────────────────────────┐
-                    │ PostgreSQL Database    │
-                    └──────────┬─────────────┘
-                               │
-                               ▼
-                    ┌────────────────────────┐
-                    │ Feature Engineering    │
-                    └──────────┬─────────────┘
-                               │
-                               ▼
-                    ┌────────────────────────┐
-                    │ Machine Learning Layer │
-                    └──────────┬─────────────┘
-                               │
-                               ▼
-                    ┌────────────────────────┐
-                    │ Signal Generation      │
-                    └──────────┬─────────────┘
-                               │
-                               ▼
-                    ┌────────────────────────┐
-                    │ Evaluation Engine      │
-                    └──────────┬─────────────┘
-                               │
-                               ▼
-                    ┌────────────────────────┐
-                    │ FastAPI Backend        │
-                    └──────────┬─────────────┘
-                               │
-                               ▼
-                    ┌────────────────────────┐
-                    │ Dashboard / Frontend   │
-                    └────────────────────────┘
+                    ┌─────────────────┐
+                    │ Yahoo Finance   │
+                    └────────┬────────┘
+                             │
+                             ▼
+                ┌──────────────────────┐
+                │ Data Collection Job  │
+                │ store_data.py        │
+                └─────────┬────────────┘
+                          │
+                          ▼
+                ┌──────────────────────┐
+                │ Neon PostgreSQL DB   │
+                └─────────┬────────────┘
+                          │
+                          ▼
+                ┌──────────────────────┐
+                │ Feature Engineering  │
+                └─────────┬────────────┘
+                          │
+                          ▼
+                ┌──────────────────────┐
+                │ XGBoost Model        │
+                └─────────┬────────────┘
+                          │
+                          ▼
+                ┌──────────────────────┐
+                │ FastAPI Backend      │
+                └─────────┬────────────┘
+                          │
+                          ▼
+                ┌──────────────────────┐
+                │ Frontend Dashboard   │
+                └──────────────────────┘
 ```
 
 ---
 
-# 📊 Model Performance
+# 🎯 Problem Statement
 
-AlphaForge is continuously evaluated on historical Bitcoin market data.
+Cryptocurrency markets generate enormous volumes of data every second.
 
-| Metric          | Value                     |
-| --------------- | ------------------------- |
-| Accuracy        | **59.0%**                 |
-| Asset           | Bitcoin (BTC)             |
-| Evaluation Type | Historical Validation     |
-| Model Status    | Baseline Production Model |
+Retail investors often struggle to:
 
-### Performance Analysis
+- Analyze multiple coins simultaneously
+- Track technical indicators
+- Understand market momentum
+- Make data-driven decisions
 
-Predicting cryptocurrency markets is inherently challenging due to:
-
-* Extreme volatility
-* Market sentiment fluctuations
-* Macroeconomic events
-* Non-stationary market behavior
-
-Despite these challenges, AlphaForge currently achieves **59% directional prediction accuracy**, indicating that the model captures meaningful market patterns beyond random chance.
+AlphaForge solves this by creating an automated intelligence layer on top of raw market data.
 
 ---
 
-# 🔥 Key Achievement
+# ⚙️ Features
 
-> Built an end-to-end cryptocurrency intelligence platform capable of generating predictive signals with **59% directional accuracy** on historical Bitcoin market data.
+## Data Pipeline
 
----
+- Automated Market Data Collection
+- Historical Data Backfill
+- Scheduled Data Updates
+- Multi-Coin Tracking
 
-# ⚡ Features
+Supported Assets:
 
-## 📈 Market Data Pipeline
-
-* Historical crypto data collection
-* Automated updates
-* Multi-asset support
-* Data normalization
-* PostgreSQL storage
-
----
-
-## 🤖 Machine Learning Engine
-
-AlphaForge predicts:
-
-* Price Movement
-* Market Direction
-* Trend Continuation
-* Signal Confidence
+- BTC
+- ETH
+- SOL
+- BNB
+- XRP
+- ADA
+- DOGE
+- AVAX
+- DOT
+- LINK
 
 ---
 
-## 📢 Signal Generation
+## Database Layer
 
-Generates:
+Cloud-hosted PostgreSQL using Neon
 
-* BUY Signals
-* SELL Signals
-* HOLD Signals
+Stores:
 
-Each signal includes confidence metrics for improved decision-making.
+- Open Price
+- High Price
+- Low Price
+- Close Price
+- Volume
+- Timestamp
 
----
+Database Schema:
 
-## 📊 Evaluation Framework
-
-Tracks:
-
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* Historical Success Rate
-* Model Performance Trends
-
----
-
-## 🌍 Multi-Coin Support
-
-Current & Planned Assets:
-
-* Bitcoin (BTC)
-* Ethereum (ETH)
-* Solana (SOL)
-* Binance Coin (BNB)
-
-Future coins can be integrated dynamically.
-
----
-
-## ⚡ Real-Time Analytics
-
-Provides:
-
-* Market Monitoring
-* Trend Detection
-* Signal Tracking
-* Historical Performance Analysis
+```sql
+market_data
+─────────────────────
+id
+symbol
+open_price
+high_price
+low_price
+close_price
+volume
+timestamp
+```
 
 ---
 
 # 🧠 Machine Learning Pipeline
 
+## Feature Engineering
+
+AlphaForge generates advanced trading indicators:
+
+### Momentum Indicators
+
+- RSI
+- RSI Overbought
+- RSI Oversold
+
+### Trend Indicators
+
+- EMA20
+- EMA50
+- EMA Cross
+- SMA Trend
+
+### Price Action
+
+- Open-Close Percentage
+- High-Low Percentage
+
+### Volatility
+
+- Rolling Volatility
+- Return Volatility
+
+### Momentum Features
+
+- Momentum 7
+- Momentum 14
+
+### Volume Analysis
+
+- Volume Change
+
+### Bollinger Bands
+
+- BB High
+- BB Low
+- BB Width
+
+### Lag Features
+
+- Return Lag 1
+- Return Lag 2
+- Return Lag 3
+
+---
+
+# 🤖 Model Training
+
+Current Model:
+
 ```text
-Market Data
-      │
-      ▼
-Data Cleaning
-      │
-      ▼
+XGBoost Classifier
+```
+
+Prediction:
+
+```text
+UP
+or
+DOWN
+```
+
+Target:
+
+```python
+Tomorrow Close > Today Close
+```
+
+---
+
+# 📊 Current Model Performance
+
+| Metric | Value |
+|----------|----------|
+| Accuracy | ~59% |
+| Coins | 10 |
+| Historical Records | 7300+ |
+| Features | 20+ |
+| Model | XGBoost |
+
+---
+
+# 🔄 ML Workflow
+
+```text
+Historical Data
+       │
+       ▼
 Feature Engineering
-      │
-      ▼
-Model Training
-      │
-      ▼
-Prediction Generation
-      │
-      ▼
-Signal Creation
-      │
-      ▼
-Performance Evaluation
+       │
+       ▼
+Training Dataset
+       │
+       ▼
+XGBoost Training
+       │
+       ▼
+Model Evaluation
+       │
+       ▼
+Prediction API
 ```
 
 ---
 
-# 🛠️ Tech Stack
+# 🚀 Backend API
 
-### Data Engineering
+Built with FastAPI.
 
-* PostgreSQL
-* SQLAlchemy
-* Pandas
+## Endpoints
 
-### Machine Learning
+### Home
 
-* Scikit-Learn
-* NumPy
-* Feature Engineering
-
-### Backend
-
-* FastAPI
-* REST APIs
-
-### DevOps
-
-* Docker
-* Docker Compose
-
-### Data Sources
-
-* Yahoo Finance
-* Cryptocurrency APIs
-
----
-
-# 📂 Project Structure
-
-```bash
-AlphaForge/
-│
-├── backend/
-│   ├── api/
-│   ├── services/
-│   └── models/
-│
-├── data/
-│
-├── ml/
-│   ├── training/
-│   ├── evaluation/
-│   └── prediction/
-│
-├── database/
-│
-├── docker/
-│
-├── frontend/
-│
-├── docs/
-│
-└── tests/
+```http
+GET /
 ```
 
----
-
-# 🌐 Example API Response
+Response:
 
 ```json
 {
-  "symbol": "BTC",
-  "signal": "BUY",
-  "confidence": 0.83,
-  "predicted_trend": "Bullish",
-  "timestamp": "2026-06-14"
+  "project": "AlphaForge",
+  "status": "Running"
 }
 ```
 
 ---
 
-# 🚧 Current Development Status
+### Health Check
 
-### ✅ Completed
-
-* Historical Data Pipeline
-* PostgreSQL Integration
-* ML Training Pipeline
-* Signal Generation Engine
-* Model Evaluation Framework
-* BTC Prediction System
-
-### 🔄 In Progress
-
-* Multi-Coin Expansion
-* Dockerization
-* Backend Deployment
-* Frontend Dashboard
-
-### 🔮 Planned
-
-* Real-Time Streaming
-* Ensemble Learning Models
-* Explainable AI (XAI)
-* Portfolio Analytics
-* Advanced Risk Analysis
+```http
+GET /health
+```
 
 ---
 
-# 🛣️ Roadmap
+### Available Coins
+
+```http
+GET /coins
+```
+
+---
+
+### Market Data
+
+```http
+GET /market-data?symbol=BTC-USD
+```
+
+Returns:
+
+- Historical OHLCV Data
+
+---
+
+### Prediction
+
+```http
+GET /latest-prediction?symbol=BTC-USD
+```
+
+Returns:
+
+```json
+{
+  "symbol":"BTC-USD",
+  "prediction":"UP",
+  "confidence":61.7
+}
+```
+
+---
+
+### Metrics
+
+```http
+GET /metrics
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+AlphaForge
+│
+├── backend
+│   ├── app.py
+│   ├── store_data.py
+│   ├── train_model.py
+│   ├── feature_engineering.py
+│   ├── backfill_historical_data.py
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── model
+│   └── crypto_model.pkl
+│
+├── screenshots
+│   ├── swagger.png
+│   ├── neon_database.png
+│   ├── prediction_api.png
+│   └── dashboard.png
+│
+├── docs
+│   ├── architecture.png
+│   ├── ml_pipeline.png
+│   └── database_schema.png
+│
+├── README.md
+│
+└── LICENSE
+```
+
+---
+
+# 🐳 Docker
+
+Build
+
+```bash
+docker build -t alphaforge .
+```
+
+Run
+
+```bash
+docker run -p 8000:8000 alphaforge
+```
+
+---
+
+# ☁️ Deployment
+
+Deployment Architecture:
+
+```text
+GitHub
+   │
+   ▼
+Render
+   │
+   ▼
+FastAPI Backend
+   │
+   ▼
+Neon PostgreSQL
+```
+
+---
+
+# 📈 Future Roadmap
 
 ## Phase 1
 
-* BTC Prediction Engine
-* Evaluation Dashboard
-* FastAPI Deployment
+- Historical Backfill
+- Real-Time Indicators
+- Model Optimization
 
 ## Phase 2
 
-* Multi-Coin Intelligence
-* Portfolio Analytics
-* Docker Infrastructure
+- Docker Deployment
+- Render Deployment
+- Automated Cron Jobs
 
 ## Phase 3
 
-* Real-Time Predictions
-* Explainable AI
-* Advanced Market Intelligence
+- React Dashboard
+- Interactive Charts
+- Portfolio Analytics
+
+## Phase 4
+
+- LSTM Forecasting
+- Transformer Models
+- News Sentiment Analysis
+- MLOps Pipeline
 
 ---
 
-# 🎯 Vision
+# 🛠️ Tech Stack
 
-AlphaForge aims to become an AI-powered crypto intelligence platform that combines Machine Learning, Data Engineering, and Real-Time Analytics to support smarter and more transparent market decision-making.
+### Backend
+
+- Python
+- FastAPI
+- SQLAlchemy
+
+### Data Processing
+
+- Pandas
+- NumPy
+
+### Machine Learning
+
+- XGBoost
+- Scikit-Learn
+- Joblib
+
+### Technical Indicators
+
+- ta
+
+### Database
+
+- PostgreSQL
+- Neon
+
+### DevOps
+
+- Docker
+- GitHub
+
+---
+
+# 📸 Screenshots
+
+Add:
+
+- Swagger UI
+- Neon Database
+- Prediction API
+- Dashboard
+
+Inside:
+
+```text
+/screenshots
+```
 
 ---
 
 # 👨‍💻 Author
 
-**Harsh Aryan**
+Harsh Aryan
 
-Electronics & Communication Engineering (ECE)
+Electronics & Communication Engineering
 
-AI • Machine Learning • Cloud Computing • Software Engineering
+Machine Learning • AI • Cloud • Data Engineering
 
----
-
-⭐ If you find this project interesting, consider giving it a star.
+Building production-ready AI systems and scalable backend infrastructure.
