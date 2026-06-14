@@ -1,4 +1,4 @@
-# 🚀 AlphaForge
+# ₿ AlphaForge
 
 > AI-Powered Cryptocurrency Intelligence & Prediction Platform
 
