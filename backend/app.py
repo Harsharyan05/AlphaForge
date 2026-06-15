@@ -133,6 +133,11 @@ def market_data(symbol: str):
 @app.get("/latest-prediction")
 def latest_prediction(symbol: str):
 
+    return {
+        "symbol": symbol,
+        "status": "endpoint working",
+        "message": "feature engineering upgrade required"
+    }
     with engine.connect() as conn:
 
         result = conn.execute(
