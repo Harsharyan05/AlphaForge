@@ -209,7 +209,7 @@ Tomorrow Close > Today Close
 
 | Metric | Value |
 |----------|----------|
-| Accuracy | ~59% |
+| Accuracy | 63.74% |
 | Coins | 10 |
 | Historical Records | 7300+ |
 | Features | 20+ |
