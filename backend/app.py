@@ -473,3 +473,32 @@ def coins():
         ]
 
     return rows
+
+
+@app.get("/all-predictions")
+def all_predictions():
+
+    coins = [
+        "BTC-USD",
+        "ETH-USD",
+        "SOL-USD",
+        "BNB-USD",
+        "XRP-USD",
+        "ADA-USD",
+        "DOGE-USD",
+        "AVAX-USD",
+        "DOT-USD",
+        "LINK-USD"
+    ]
+
+    results = []
+
+    for coin in coins:
+        try:
+            results.append(
+                latest_prediction(coin)
+            )
+        except Exception:
+            pass
+
+    return results
